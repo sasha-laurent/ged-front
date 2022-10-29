@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
-import { DocumentListComponent } from './documents-list/document-list.component';
+import { DocumentListComponent } from './document-list/document-list.component';
 import { DocumentFormComponent } from './document-form/document-form.component';
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
   { path: 'documents', component: DocumentListComponent },
@@ -22,9 +23,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
