@@ -64,7 +64,7 @@ export class GedBackClientService {
 
   private getAuthenticationHeader() {
     return {
-      'Authorization': this.authenticationService.getAuthenticatedToken()
+      'X-Custom-Auth': this.authenticationService.getAuthenticatedToken()
     }
   }
 }

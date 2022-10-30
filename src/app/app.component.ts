@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "./service/security/authentication.service";
-import {BehaviorSubject, Subscriber} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,6 @@ import {BehaviorSubject, Subscriber} from "rxjs";
 export class AppComponent implements OnInit{
   title = 'ged-front';
   isAuthenticated: boolean = false;
-  authenticationSubscriber = new BehaviorSubject(false);
 
   constructor(private authenticationService: AuthenticationService) {
   }
