@@ -8,7 +8,6 @@ export interface DocumentInterface {
 export class DocumentModel {
   constructor(
     public name: string = '',
-    public authorId: string = '',
     public file: File|null,
   ) {
   }

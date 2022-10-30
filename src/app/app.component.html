@@ -1,5 +1,15 @@
 <nav>
   <span>Welcome to Ma Super GED !!</span>
-  <span class="links"><a routerLink="documents">See my documents</a>|<a routerLink="documents/new">Create document</a></span>
+  <span class="links">
+    <span *ngIf="isAuthenticated">
+      <a routerLink="documents">See my documents</a>
+      |<a routerLink="documents/new">Create document</a>
+      |<a href="#" (click)="logout()">Logout</a>
+    </span>
+    <span *ngIf="!isAuthenticated">
+      <a routerLink="register">Register</a>
+      |<a routerLink="login">Login</a>
+    </span>
+  </span>
 </nav>
 <router-outlet></router-outlet>

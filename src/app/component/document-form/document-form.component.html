@@ -1,7 +1,6 @@
 <h2>Upload a new document</h2>
 <form (ngSubmit)="onSubmit()" >
   <input name="name" type="text" placeholder="Name your document" [(ngModel)]="document.name" />
-  <input name="authorId" type="text" placeholder="AuthorId" [(ngModel)]="document.authorId" />
   <input name="file" type="file" (change)="onChange($event)" />
   <button type="submit">Upload</button>
 </form>
