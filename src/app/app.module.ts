@@ -6,6 +6,7 @@ import {RouterModule, Routes} from "@angular/router";
 import { DocumentListComponent } from './document-list/document-list.component';
 import { DocumentFormComponent } from './document-form/document-form.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   { path: 'documents', component: DocumentListComponent },
@@ -22,9 +23,10 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      {enableTracing: true} // <-- debugging purposes only
     ),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
   ],
